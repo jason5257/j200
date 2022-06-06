@@ -7,7 +7,7 @@ keycloak:
   ssl-required: external
   resource: my_client
   credentials:
-    secret: 597439a1-ac08-4347-ab5a-1e8f7e3491c4
+    secret: sFnKfXWz4QKXWsWaQXucZ4OtEbXLPslK
   use-resource-role-mappings: true
   bearer-only: true
 

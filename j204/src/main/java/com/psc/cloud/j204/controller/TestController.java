@@ -19,19 +19,19 @@ public class TestController {
 
     @RequestMapping(value = "/authenticated", method = RequestMethod.GET)
     public ResponseEntity<String> authenticated(@RequestHeader String Authorization) {
-        log.debug(Authorization);
+        log.info(Authorization);
         return ResponseEntity.ok("로그인한 사람 누구나 가능합니다.\n");
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public ResponseEntity<String> user(@RequestHeader String Authorization) {
-        log.debug(Authorization);
+        log.info(Authorization);
         return ResponseEntity.ok("user 가능합니다.\n");
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public ResponseEntity<String> admin(@RequestHeader String Authorization) {
-        log.debug(Authorization);
+        log.info(Authorization);
         return ResponseEntity.ok("admin 가능합니다.\n");
     }
 

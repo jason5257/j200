@@ -21,6 +21,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 		)
 				.oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
-				.exceptionHandling().accessDeniedPage("/api/deny");
+				.exceptionHandling()
+				.accessDeniedHandler((request, response, accessDeniedException) -> {
+					System.out.println("accessDeniedException.getMessage() = " + accessDeniedException.getMessage());
+				});
 	}
 }
